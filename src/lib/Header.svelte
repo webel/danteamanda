@@ -1,0 +1,83 @@
+<script lang="ts">
+	import Close from './Close.svelte';
+	import Hamburger from './Hamburger.svelte';
+	const links = [
+		{
+			name: 'Vigsel',
+			href: '#vigsel'
+		},
+		{
+			name: 'Middag och Fest',
+			href: '#fest'
+		},
+		{
+			name: 'Resa',
+			href: '#resa'
+		},
+		{
+			name: 'Bilder',
+			href: '#bilder'
+		},
+		{
+			name: 'Mat och dryck',
+			href: '#mat'
+		},
+		{
+			name: 'Boende',
+			href: '#boende'
+		},
+		{
+			name: 'Klädsel',
+			href: '#kladsel'
+		},
+		{
+			name: 'Barn',
+			href: '#barn'
+		},
+		{
+			name: 'Önskelista',
+			href: '#onskelista'
+		},
+		{
+			name: 'Tal',
+			href: '#tal'
+		},
+		{
+			name: 'OSA',
+			href: '#osa'
+		}
+	];
+
+	let showMenu = true;
+
+	const toggleMenu = () => {
+		showMenu = !showMenu;
+	};
+</script>
+
+<header class={'hidden md:block h-[100vh] p-12 space-around paper-overlay'}>
+	<nav class="h-full">
+		<ul class="flex flex-col h-full justify-around">
+			{#each links as link}
+				<li><a href={link.href}>{link.name}</a></li>
+			{/each}
+		</ul>
+	</nav>
+</header>
+
+<header class="md:hidden relative h-16 w-screen p-4 flex bg-white justify-between items-center">
+	<Hamburger on:click={toggleMenu} />
+
+	{#if showMenu}
+		<div class="fixed top-0 z-50 left-0 w-screen h-screen bg-gray-50 p-4">
+			<Close on:click={toggleMenu} />
+			<ul
+				class={`space-x-4 h-full flex flex-col justify-evenly items-center libre-baskerville-regular`}
+			>
+				{#each links as link}
+					<li><a href={link.href} on:click={toggleMenu}>{link.name}</a></li>
+				{/each}
+			</ul>
+		</div>
+	{/if}
+</header>

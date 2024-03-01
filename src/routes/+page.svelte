@@ -71,6 +71,15 @@
 			</p></InfoSection
 		>
 
+		<h1 id="bilder" class="text-6xl text-center font-bold caveat mb-8">Bilder</h1>
+		<section class="mb-32 space-y-2 shadow-xl p-12 bg-white">
+			<p>
+				Vi hoppas att ni är några i gästlistan som kan tänka sig att föreviga vår dag med bilder.
+				Här kommer ni att kunna lägga upp bilder i en gemensam bildbank.
+			</p>
+			<p>[TODO: Länk till bildbanken, förslagsvis Google Photos album]</p>
+		</section>
+
 		<h1 class="text-6xl text-center font-bold caveat mb-8">Bra att Veta</h1>
 
 		<section class="mb-32 grid md:grid-cols-2 gap-10" id="bra">

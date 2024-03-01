@@ -11,10 +11,6 @@
 			href: '#fest'
 		},
 		{
-			name: 'Resa',
-			href: '#resa'
-		},
-		{
 			name: 'Bilder',
 			href: '#bilder'
 		},
@@ -48,14 +44,22 @@
 		}
 	];
 
-	let showMenu = true;
+	let showMenu = false;
 
 	const toggleMenu = () => {
 		showMenu = !showMenu;
+
+		if (showMenu) {
+			document.body.style.overflow = 'hidden';
+		} else {
+			document.body.style.overflow = 'auto';
+		}
 	};
 </script>
 
-<header class={'hidden md:block h-[100vh] p-12 space-around paper-overlay'}>
+<header
+	class={'hidden md:block sticky top-0 h-[100vh] w-[320px] text-center p-12 space-around bg-gray-200'}
+>
 	<nav class="h-full">
 		<ul class="flex flex-col h-full justify-around">
 			{#each links as link}
@@ -65,7 +69,7 @@
 	</nav>
 </header>
 
-<header class="md:hidden relative h-16 w-screen p-4 flex bg-white justify-between items-center">
+<header class="md:hidden relative h-16 w-screen p-4 flex bg-gray-100 justify-between items-center">
 	<Hamburger on:click={toggleMenu} />
 
 	{#if showMenu}

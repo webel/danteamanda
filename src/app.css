@@ -3,19 +3,28 @@
 @tailwind utilities;
 
 @layer base {
-  .libre-baskerville-regular {
+  body {
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    color: #333;
+  }
+
+  .baskerville-regular {
     font-family: 'Libre Baskerville', serif;
     font-weight: 400;
     font-style: normal;
   }
 
-  .libre-baskerville-bold {
+  .baskerville-bold {
     font-family: 'Libre Baskerville', serif;
     font-weight: 700;
     font-style: normal;
   }
 
-  .libre-baskerville-regular-italic {
+  .baskerville-regular-italic {
     font-family: 'Libre Baskerville', serif;
     font-weight: 400;
     font-style: italic;

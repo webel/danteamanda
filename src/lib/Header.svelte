@@ -58,7 +58,7 @@
 </script>
 
 <header
-	class={'hidden md:block sticky top-0 h-[100vh] w-[320px] text-center p-12 space-around bg-gray-200'}
+	class={'hidden md:block sticky top-0 h-[100vh] w-[320px] text-center p-12 space-around bg-stone-200'}
 >
 	<nav class="h-full">
 		<ul class="flex flex-col h-full justify-around">
@@ -69,11 +69,11 @@
 	</nav>
 </header>
 
-<header class="md:hidden relative h-16 w-screen p-4 flex bg-gray-100 justify-between items-center">
+<header class="md:hidden relative h-16 w-screen p-4 flex bg-stone-100 justify-between items-center">
 	<Hamburger on:click={toggleMenu} />
 
 	{#if showMenu}
-		<div class="fixed top-0 z-50 left-0 w-screen h-screen bg-gray-50 p-4">
+		<div class="fixed top-0 z-50 left-0 w-screen h-screen bg-stone-50 p-4">
 			<Close on:click={toggleMenu} />
 			<ul
 				class={`space-x-4 h-full flex flex-col justify-evenly items-center libre-baskerville-regular`}

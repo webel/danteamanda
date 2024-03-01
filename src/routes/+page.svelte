@@ -139,7 +139,7 @@
 			</p>
 		</section>
 
-		<h1 id="osa" class="text-6xl text-center font-bold caveat mb-8">Tal</h1>
+		<h1 id="tal" class="text-6xl text-center font-bold caveat mb-8">Tal</h1>
 		<section class="mb-32 space-y-4 shadow-xl p-12 bg-white">
 			<p>
 				Om du vill hålla tal, uppträda eller spexa får du gärna anmäla det nedan. Vi ser inte
@@ -150,7 +150,8 @@
 			<p>Har du frågor om tal och spex kan du mejla eller ringa våra toastmasters.</p>
 			<p><b>Anne Larsen</b> 070-296 69 31</p>
 		</section>
-		<h1 class="text-6xl text-center font-bold caveat mb-8">OSA</h1>
+
+		<h1 id="osa" class="text-6xl text-center font-bold caveat mb-8">OSA</h1>
 		<section class="mb-32 space-y-4 shadow-xl p-12 bg-white">
 			OSA i formuläret nedan senast den 1/7. Om du har frågor hör gärna av dig.
 		</section>

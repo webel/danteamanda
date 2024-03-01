@@ -46,7 +46,7 @@
 			</p>
 		</InfoSection>
 		<InfoSection
-			place="Folkets Hus, Robertsfors, Sweden"
+			place="Overklinten Folkets Hus, Robertsfors, Sweden"
 			imgSrc="middag.png"
 			name="Middag och Fest"
 			id="fest"

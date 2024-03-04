@@ -1,14 +1,34 @@
 <script lang="ts">
+	import clsx from 'clsx';
 	import Card from '$lib/Card.svelte';
 	import Countdown from '$lib/Countdown.svelte';
 	import InfoSection from '$lib/InfoSection.svelte';
+	import { speachesForm, osaForm } from '$lib/forms';
+	import { page } from '$app/stores';
+	import { goto } from '$app/navigation';
+	import { onMount } from 'svelte';
+
+	const currentLocation = $page.url.origin;
+
+	let formParam = '';
+	// extract search param value for "form"
+	onMount(() => {
+		formParam = $page.url.searchParams.get('form');
+
+		if (formParam) {
+			goto(`#${formParam}`);
+		}
+	});
+
+	let numberOfOSA = 0;
+	let showTal = false;
 </script>
 
 <main class="p-12 flex-1">
 	<section class="space-y-8 flex flex-col items-center w-full">
 		<h1 class="text-6xl text-center font-bold caveat">Dante & Amanda</h1>
 		<h2 class="text-4xl text-center caveat">Västbyn 31/8 2024</h2>
-		<img src="par.jpeg" alt="Dante & Amanda" class="rounded-lg md:max-w-[600px] w-96" />
+		<img src="start.jpg" alt="Dante & Amanda" class="rounded-lg md:max-w-[600px] w-96" />
 		<Countdown
 			from="2024-08-31 15:00:00"
 			dateFormat="YYYY-MM-DD H:m:s"
@@ -47,7 +67,7 @@
 		</InfoSection>
 		<InfoSection
 			place="Overklinten Folkets Hus, Robertsfors, Sweden"
-			imgSrc="middag.png"
+			imgSrc="middag.jpg"
 			name="Middag och Fest"
 			id="fest"
 		>
@@ -83,16 +103,22 @@
 		<h1 class="text-6xl text-center font-bold caveat mb-8">Bra att Veta</h1>
 
 		<section class="mb-32 grid md:grid-cols-2 gap-10" id="bra">
-			<!-- First item -->
 			<Card
 				title="Mat och dryck"
 				content="I samband med brudskål serveras det bubbel och snittar. Till middagen kommer det att dukas upp till buffe och påföljande efterrätt. Vi bjuder på två glas dryck under middagen. Baren kommer vara öppen till självkostnadspris under kvällen."
-				imgSrc="matochdryck.webp"
+				imgSrc="matochdryck.jpg"
 				alt="Table setup for an event"
 				id="mat"
 			/>
 
-			<!-- Second item -->
+			<Card
+				title="Klädsel"
+				content="Ett förslag är kavaj för herrar. Val av färg både på kavajen och skjortan gör du själv. För damer kan ju klänning, kjol, byxdress eller dräkt vara passande.
+        Men oavsett är det viktiga att du känner dig bekväm och fin."
+				imgSrc="kladsel.jpeg"
+				alt="Dress code demonstration"
+				id="kladsel"
+			/>
 
 			<Card title="Boende" imgSrc="kvarn.png" alt="City view" id="boende">
 				<p>
@@ -112,20 +138,11 @@
 					<a href="https://www.visitrobertsfors.nu/sv/bo">Visit Robertsfors</a>.
 				</p>
 			</Card>
-			<!-- Third item -->
-			<Card
-				title="Klädsel"
-				content="Ett förslag är kavaj för herrar. Val av färg både på kavajen och skjortan gör du själv. För damer kan ju klänning, kjol, byxdress eller dräkt vara passande.
-        Men oavsett är det viktiga att du känner dig bekväm och fin."
-				imgSrc="kladsel.webp"
-				alt="Dress code demonstration"
-				id="kladsel"
-			/>
 
 			<Card
 				title="Barn"
 				content="Era barn är naturligtvis välkomna på vigseln och under middagen, efter 20:00 har vi planerat att dansgolvet öppnas och då tänker vi att det är dags för barnen att avlägsna sig. Spädbarn är självklart välkomna under hela firandet."
-				imgSrc="barn.webp"
+				imgSrc="barn.jpg"
 				alt="Children at an event"
 				id="barn"
 			/>
@@ -140,20 +157,107 @@
 		</section>
 
 		<h1 id="tal" class="text-6xl text-center font-bold caveat mb-8">Tal</h1>
-		<section class="mb-32 space-y-4 shadow-xl p-12 bg-white">
-			<p>
-				Om du vill hålla tal, uppträda eller spexa får du gärna anmäla det nedan. Vi ser inte
-				anmälan utan informationen skickas direkt till våra toastmasters Anne och [TODO].
-			</p>
+		<section class="mb-32 shadow-xl p-12 bg-white">
+			<div class="space-y-4">
+				<p>
+					Om du vill hålla tal, uppträda eller spexa får du gärna anmäla det nedan. Vi ser inte
+					anmälan utan informationen skickas direkt till vår toastmaster Anne.
+				</p>
 
-			<p>För tal brukar ca 5 minuter vara lagom.</p>
-			<p>Har du frågor om tal och spex kan du mejla eller ringa våra toastmasters.</p>
-			<p><b>Anne Larsen</b> 070-296 69 31</p>
+				<p>För tal brukar ca 5 minuter vara lagom.</p>
+				<p>Har du frågor om tal och spex kan du mejla eller ringa våra toastmasters.</p>
+				<p><b>Anne Larsen</b> 070-296 69 31</p>
+			</div>
+
+			{#if formParam === 'tal'}
+				<p class="mt-8 text-center text-gray-700">Tack för din anmälan!</p>
+			{:else if showTal}
+				<form
+					class="mt-8 bg-stone-50 grid grid-cols-1 md:grid-cols-2 gap-4 px-8 pt-6 pb-8 mb-4"
+					action="https://submit-form.com/CKkOsyrAP"
+				>
+					<input type="hidden" name="_redirect" value="{currentLocation}?form=tal" />
+					<input type="hidden" name="_append" value="false" />
+					{#each speachesForm as { name, label, type, required }}
+						<div class="mb-4 flex flex-col justify-between">
+							<label class="block text-gray-700 text-sm font-bold mb-2" for={name}>{label}</label>
+							<input
+								class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+								{type}
+								id={name}
+								{name}
+								{required}
+							/>
+						</div>
+					{/each}
+					<div class="col-span-1 md:col-span-2 flex justify-center">
+						<button class="elegant-submit-button" type="submit">Skicka</button>
+					</div>
+				</form>
+			{:else}
+				<div class="flex mt-12 justify-center">
+					<button
+						class="elegant-submit-button bg-gray-700 hover:bg-gray-500"
+						on:click={() => (showTal = true)}
+					>
+						Anmäl tal eller spex</button
+					>
+				</div>
+			{/if}
 		</section>
 
 		<h1 id="osa" class="text-6xl text-center font-bold caveat mb-8">OSA</h1>
 		<section class="mb-32 space-y-4 shadow-xl p-12 bg-white">
-			OSA i formuläret nedan senast den 1/7. Om du har frågor hör gärna av dig.
+			<p>OSA i formuläret nedan senast den 1/7. Om du har frågor hör gärna av dig.</p>
+
+			{#if formParam === 'osa'}
+				<p class="mt-8 text-center text-gray-700">Tack för din OSA!</p>
+			{:else}
+				<p class="text-center text-gray-700">Välj antalet personer att OSA för:</p>
+
+				<div class="flex gap-2 justify-center w-full">
+					{#each [1, 2, 3, 4, 5] as number}
+						<button
+							class={clsx('w-12 h-12 bg-gray-700 text-white', {
+								'bg-gray-500': number === numberOfOSA,
+								'hover:bg-gray-600': number !== numberOfOSA
+							})}
+							on:click={() => (numberOfOSA = number)}
+						>
+							{number}
+						</button>
+					{/each}
+				</div>
+			{/if}
+
+			{#if numberOfOSA > 0}
+				<form
+					class="mt-8 bg-stone-50 grid grid-cols-1 md:grid-cols-2 gap-4 px-8 pt-6 pb-8 mb-4"
+					action="https://submit-form.com/ziknqZsej"
+				>
+					<input type="hidden" name="_redirect" value="{currentLocation}?form=osa" />
+					<input type="hidden" name="_append" value="false" />
+					{#each Array(numberOfOSA) as _, number}
+						<p class="text-center col-span-1 md:col-span-2 text-gray-700">Person {number + 1}</p>
+						<input type="hidden" name="osa" value={number} />
+						{#each osaForm as { name, label, type, required }}
+							<div class="mb-4 flex flex-col justify-between">
+								<label class="block text-gray-700 text-sm font-bold mb-2" for={name}>{label}</label>
+								<input
+									class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+									{type}
+									id={name}
+									{name}
+									{required}
+								/>
+							</div>
+						{/each}
+					{/each}
+					<div class="col-span-1 md:col-span-2 flex justify-center">
+						<button class="elegant-submit-button" type="submit">Skicka</button>
+					</div>
+				</form>
+			{/if}
 		</section>
 	</section>
 </main>
@@ -180,4 +284,22 @@
 		font-size: 3rem;
 		font-weight: bold;
 	}
+
+	.elegant-submit-button {
+		color: #ffffff;
+		font-weight: 300;
+		padding: 12px 48px; /* Larger padding for a bigger button */
+		border: none;
+		transition: background-color 0.3s ease-in-out;
+	}
+
+	.elegant-submit-button:hover {
+		cursor: pointer;
+	}
+
+	.elegant-submit-button:focus {
+		outline: 2px solid #cbd5e0; /* Custom focus ring color */
+		outline-offset: 2px;
+	}
 </style>
+

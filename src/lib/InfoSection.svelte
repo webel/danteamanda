@@ -8,7 +8,7 @@
 </script>
 
 <section class="space-y-8 mb-32" {id}>
-	<h1 class="text-6xl text-center font-bold caveat">{name}</h1>
+	<h1 class="text-6xl text-center font-bold la-luxes-script">{name}</h1>
 	<div class="flex flex-wrap items-center justify-center gap-8">
 		<img src={imgSrc} alt="Vigsel" class="w-full shadow-xl lg:h-[430px] lg:w-auto" />
 		<Map {place} />

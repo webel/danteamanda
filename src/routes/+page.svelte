@@ -26,8 +26,8 @@
 
 <main class="p-12 flex-1">
 	<section class="space-y-8 flex flex-col items-center w-full">
-		<h1 class="text-6xl text-center font-bold caveat">Dante & Amanda</h1>
-		<h2 class="text-4xl text-center caveat">Västbyn 31/8 2024</h2>
+		<h1 class="text-6xl text-center font-bold la-luxes-script">Dante & Amanda</h1>
+		<h2 class="text-4xl text-center la-luxes-script">Västbyn 31/8 2024</h2>
 		<img src="start.jpg" alt="Dante & Amanda" class="rounded-lg md:max-w-[600px] w-96" />
 		<Countdown
 			from="2024-08-31 15:00:00"
@@ -49,7 +49,7 @@
 	</section>
 	<section class="mt-32 max-w-[920px] m-auto">
 		<InfoSection place="Västbyn 22, Robertsfors, Sweden" imgSrc="vigsel.png">
-			<h2 class="text-4xl caveat mb-8">15.00 - Vigsel i Västbyn</h2>
+			<h2 class="text-4xl la-luxes-script mb-8">15.00 - Vigsel i Västbyn</h2>
 			<p>
 				Klockan tre börjar vår vigsel hemma på gården i Västbyn. Du hittar smidigast dit genom att
 				följa E4:an norrut från Umeå, svänga av i Sikeå mot Robertsfors väg 651. Efter Överklinten,
@@ -71,7 +71,7 @@
 			name="Middag och Fest"
 			id="fest"
 		>
-			<h2 class="text-4xl caveat mb-8">ca 17.00 - Middag och Fest i Folkets Hus</h2>
+			<h2 class="text-4xl la-luxes-script mb-8">ca 17.00 - Middag och Fest i Folkets Hus</h2>
 			<p>
 				Runt 17 planeras bröllopsparet anlända till "Folkan". Väl där är det middag med påföljande
 				fest. Från Västbyn till Folkets Hus är det ungefär 2,5 kilometer. Ta gärna följe med någon
@@ -91,7 +91,7 @@
 			</p></InfoSection
 		>
 
-		<h1 id="bilder" class="text-6xl text-center font-bold caveat mb-8">Bilder</h1>
+		<h1 id="bilder" class="text-6xl text-center font-bold la-luxes-script mb-8">Bilder</h1>
 		<section class="mb-32 space-y-2 shadow-xl p-12 bg-white">
 			<p>
 				Vi hoppas att ni är några i gästlistan som kan tänka sig att föreviga vår dag med bilder.
@@ -100,7 +100,7 @@
 			<p>[TODO: Länk till bildbanken, förslagsvis Google Photos album]</p>
 		</section>
 
-		<h1 class="text-6xl text-center font-bold caveat mb-8">Bra att Veta</h1>
+		<h1 class="text-6xl text-center font-bold la-luxes-script mb-8">Bra att Veta</h1>
 
 		<section class="mb-32 grid md:grid-cols-2 gap-10" id="bra">
 			<Card
@@ -148,7 +148,7 @@
 			/>
 		</section>
 
-		<h1 id="onskelista" class="text-6xl text-center font-bold caveat mb-8">Önskelista</h1>
+		<h1 id="onskelista" class="text-6xl text-center font-bold la-luxes-script mb-8">Önskelista</h1>
 		<section class="mb-32 shadow-xl p-12 bg-white">
 			<p>
 				Din närvaro är allt vi önskar. Men vill ni ändå uppmärksamma vår dag med en gåva är ett
@@ -156,7 +156,7 @@
 			</p>
 		</section>
 
-		<h1 id="tal" class="text-6xl text-center font-bold caveat mb-8">Tal</h1>
+		<h1 id="tal" class="text-6xl text-center font-bold la-luxes-script mb-8">Tal</h1>
 		<section class="mb-32 shadow-xl p-12 bg-white">
 			<div class="space-y-4">
 				<p>
@@ -196,17 +196,14 @@
 				</form>
 			{:else}
 				<div class="flex mt-12 justify-center">
-					<button
-						class="elegant-submit-button bg-gray-700 hover:bg-gray-500"
-						on:click={() => (showTal = true)}
-					>
+					<button class="elegant-submit-button" on:click={() => (showTal = true)}>
 						Anmäl tal eller spex</button
 					>
 				</div>
 			{/if}
 		</section>
 
-		<h1 id="osa" class="text-6xl text-center font-bold caveat mb-8">OSA</h1>
+		<h1 id="osa" class="text-6xl text-center font-bold la-luxes-script mb-8">OSA</h1>
 		<section class="mb-32 space-y-4 shadow-xl p-12 bg-white">
 			<p>OSA i formuläret nedan senast den 1/7. Om du har frågor hör gärna av dig.</p>
 
@@ -286,6 +283,7 @@
 	}
 
 	.elegant-submit-button {
+		@apply bg-gray-700 hover:bg-gray-500;
 		color: #ffffff;
 		font-weight: 300;
 		padding: 12px 48px; /* Larger padding for a bigger button */
@@ -302,4 +300,3 @@
 		outline-offset: 2px;
 	}
 </style>
-

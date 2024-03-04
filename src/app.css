@@ -41,6 +41,21 @@
     font-optical-sizing: auto;
     font-style: normal;
   }
+
+  @font-face {
+    font-family: 'la_luxes_script';
+    src:
+      url('laluxe/la_luxes_script-webfont.woff2') format('woff2'),
+      url('laluxe/la_luxes_script-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .la-luxes-script {
+    font-family: 'la_luxes_script', cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
 }
 
 @layer components {

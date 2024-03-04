@@ -50,9 +50,9 @@
 		showMenu = !showMenu;
 
 		if (showMenu) {
-			document.body.style.overflow = 'hidden';
+			document.body.style['overflow-y'] = 'hidden';
 		} else {
-			document.body.style.overflow = 'auto';
+			document.body.style['overflow-y'] = 'auto';
 		}
 	};
 </script>

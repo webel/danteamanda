@@ -11,7 +11,6 @@
 	const currentLocation = $page.url.origin;
 
 	let formParam = '';
-	// extract search param value for "form"
 	onMount(() => {
 		formParam = $page.url.searchParams.get('form');
 
@@ -25,10 +24,10 @@
 </script>
 
 <main class="p-12 flex-1">
-	<section class="space-y-8 flex flex-col items-center w-full">
+	<section class="space-y-8 flex flex-col items-center w-full h-screen">
 		<h1 class="text-6xl text-center font-bold la-luxes-script">Dante & Amanda</h1>
 		<h2 class="text-4xl text-center la-luxes-script">Västbyn 31/8 2024</h2>
-		<img src="start.jpg" alt="Dante & Amanda" class="rounded-lg md:max-w-[600px] w-96" />
+		<img src="start.jpg" alt="Dante & Amanda" class="rounded-lg w-80 md:w-[600px]" />
 		<Countdown
 			from="2024-08-31 15:00:00"
 			dateFormat="YYYY-MM-DD H:m:s"
@@ -278,8 +277,9 @@
 	}
 
 	.countdown span {
+		@apply text-gray-600;
 		font-size: 3rem;
-		font-weight: bold;
+		font-weight: 300;
 	}
 
 	.elegant-submit-button {
@@ -298,5 +298,11 @@
 	.elegant-submit-button:focus {
 		outline: 2px solid #cbd5e0; /* Custom focus ring color */
 		outline-offset: 2px;
+	}
+
+	@media (max-width: 768px) {
+		.countdown span {
+			font-size: 2rem;
+		}
 	}
 </style>

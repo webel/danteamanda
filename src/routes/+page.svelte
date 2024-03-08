@@ -24,7 +24,7 @@
 </script>
 
 <main class="p-12 flex-1">
-	<section class="space-y-8 flex flex-col items-center w-full h-screen">
+	<section class="space-y-8 flex flex-col items-center w-full h-screen justify-center">
 		<h1 class="text-6xl text-center font-bold la-luxes-script">Dante & Amanda</h1>
 		<h2 class="text-5xl text-center la-luxes-script">Västbyn 31/8 2024</h2>
 		<img src="start.jpg" alt="Dante & Amanda" class="rounded-lg w-80 md:w-[600px]" />

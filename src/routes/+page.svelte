@@ -165,7 +165,14 @@
 
 				<p>För tal brukar ca 5 minuter vara lagom.</p>
 				<p>Har du frågor om tal och spex kan du mejla eller ringa våra toastmasters.</p>
-				<p><b>Anne Larsen</b> 070-296 69 31</p>
+				<p>
+					<b>Anne Larsen</b><br />
+					070-296 69 31 <br /> anne.dragsbaek21@live.dk
+				</p>
+				<p>
+					<b>Daniel Dahlgren</b><br />
+					070-206 33 26 <br /> anne.dragsbaek21@live.dk
+				</p>
 			</div>
 
 			{#if formParam === 'tal'}
@@ -235,15 +242,17 @@
 					<input type="hidden" name="_append" value="false" />
 					{#each Array(numberOfOSA) as _, number}
 						<p class="text-center col-span-1 md:col-span-2 text-gray-700">Person {number + 1}</p>
-						<input type="hidden" name="osa" value={number} />
+						<input type="hidden" name="osa" value="person-{number + 1}" />
 						{#each osaForm as { name, label, type, required }}
 							<div class="mb-4 flex flex-col justify-between">
-								<label class="block text-gray-700 text-sm font-bold mb-2" for={name}>{label}</label>
+								<label class="block text-gray-700 text-sm font-bold mb-2" for={name + number}
+									>{label}</label
+								>
 								<input
 									class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
 									{type}
-									id={name}
-									{name}
+									id={name + number}
+									name={name + number}
 									{required}
 								/>
 							</div>

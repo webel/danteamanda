@@ -98,12 +98,19 @@
 		>
 
 		<h1 id="bilder" class="text-6xl text-center font-bold la-luxes-script mb-8">Bilder</h1>
-		<section class="mb-32 space-y-2 shadow-xl p-8 custom:p-12 bg-white">
+		<section class="mb-32 flex flex-col shadow-xl p-8 custom:p-12 bg-white">
 			<p>
 				Vi hoppas att ni är några i gästlistan som kan tänka sig att föreviga vår dag med bilder.
 				Här kommer ni att kunna lägga upp bilder i en gemensam bildbank.
 			</p>
-			<p>[TODO: Länk till bildbanken, förslagsvis Google Photos album]</p>
+			<button
+				class="elegant-submit-button mx-auto mt-4"
+				on:click={() =>
+					window.open(
+						'https://l.messenger.com/l.php?u=https%3A%2F%2Fphotos.app.goo.gl%2FWgKLAswaphfeE61y7&h=AT1jc1Ng4bp59Dy_iLU7z7y9a6VBdutGk4-piIJcJMMGu-Y-Bl02cJi0UounbUi2U4cfY3DTZpnfpp-MpwwpBESY76h1Qiq-U7UyXkAlvPDIGOuFFrN5yPx9AbHOrDtUZhs8ghtX',
+						'_blank'
+					)}>Öppna bildbanken</button
+			>
 		</section>
 
 		<h1 class="text-6xl text-center font-bold la-luxes-script mb-8">Bra att Veta</h1>

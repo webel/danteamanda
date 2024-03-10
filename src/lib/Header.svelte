@@ -5,8 +5,7 @@
 	const links = [
 		{
 			name: 'Vigsel',
-			href: '#vigsel',
-			isActive: true
+			href: '#vigsel'
 		},
 		{
 			name: 'Middag och Fest',

@@ -23,11 +23,15 @@
 	let showTal = false;
 </script>
 
-<main class="p-12 flex-1">
-	<section class="space-y-8 flex flex-col items-center w-full h-screen justify-center">
+<main class="p-6 custom:p-12 flex-1">
+	<section class="space-y-8 flex flex-col items-center w-full h-[calc(100vh-80px)] justify-center">
 		<h1 class="text-6xl text-center font-bold la-luxes-script">Dante & Amanda</h1>
 		<h2 class="text-5xl text-center la-luxes-script">Västbyn 31/8 2024</h2>
-		<img src="start.jpg" alt="Dante & Amanda" class="rounded-lg w-80 md:w-[600px]" />
+		<img
+			src="start.jpg"
+			alt="Dante & Amanda"
+			class="rounded-lg w-80 md:w-[380px] custom:w-[500px]"
+		/>
 		<Countdown
 			from="2024-08-31 15:00:00"
 			dateFormat="YYYY-MM-DD H:m:s"
@@ -74,8 +78,11 @@
 			<p>
 				Runt 17 planeras bröllopsparet anlända till "Folkan". Väl där är det middag med påföljande
 				fest. Från Västbyn till Folkets Hus är det ungefär 2,5 kilometer. Ta gärna följe med någon
-				som hittar i trakten, annars hittar man rätt med adressen nedan. Det är alltid utför och
-				medvind till Folkan så en medhavd cykel är kanske ett trevligt alternativ?
+				som hittar i trakten, annars hittar man rätt med adressen nedan.
+			</p>
+			<p class="mt-4">
+				Det är alltid utför och medvind till Folkan så en medhavd cykel är kanske ett trevligt
+				alternativ?
 			</p>
 			<p class="mt-2">
 				<b>
@@ -91,7 +98,7 @@
 		>
 
 		<h1 id="bilder" class="text-6xl text-center font-bold la-luxes-script mb-8">Bilder</h1>
-		<section class="mb-32 space-y-2 shadow-xl p-12 bg-white">
+		<section class="mb-32 space-y-2 shadow-xl p-8 custom:p-12 bg-white">
 			<p>
 				Vi hoppas att ni är några i gästlistan som kan tänka sig att föreviga vår dag med bilder.
 				Här kommer ni att kunna lägga upp bilder i en gemensam bildbank.
@@ -101,7 +108,7 @@
 
 		<h1 class="text-6xl text-center font-bold la-luxes-script mb-8">Bra att Veta</h1>
 
-		<section class="mb-32 grid md:grid-cols-2 gap-10" id="bra">
+		<section class="mb-32 grid custom:grid-cols-2 gap-10">
 			<Card
 				title="Mat och dryck"
 				content="I samband med brudskål serveras det bubbel och snittar. Till middagen kommer det att dukas upp till buffe och påföljande efterrätt. Vi bjuder på två glas dryck under middagen. Baren kommer vara öppen till självkostnadspris under kvällen."
@@ -148,7 +155,7 @@
 		</section>
 
 		<h1 id="onskelista" class="text-6xl text-center font-bold la-luxes-script mb-8">Önskelista</h1>
-		<section class="mb-32 shadow-xl p-12 bg-white">
+		<section class="mb-32 shadow-xl p-8 custom:p-12 bg-white">
 			<p>
 				Din närvaro är allt vi önskar. Men vill ni ändå uppmärksamma vår dag med en gåva är ett
 				bidrag till vår bröllopsresa en uppskattad gåva, swisha till 070-3229775.
@@ -156,7 +163,7 @@
 		</section>
 
 		<h1 id="tal" class="text-6xl text-center font-bold la-luxes-script mb-8">Tal</h1>
-		<section class="mb-32 shadow-xl p-12 bg-white">
+		<section class="mb-32 shadow-xl p-8 custom:p-12 bg-white">
 			<div class="space-y-4">
 				<p>
 					Om du vill hålla tal, uppträda eller spexa får du gärna anmäla det nedan. Vi ser inte
@@ -179,7 +186,7 @@
 				<p class="mt-8 text-center text-gray-700">Tack för din anmälan!</p>
 			{:else if showTal}
 				<form
-					class="mt-8 bg-stone-50 grid grid-cols-1 md:grid-cols-2 gap-4 px-8 pt-6 pb-8 mb-4"
+					class="mt-8 bg-stone-50 grid grid-cols-1 custom:grid-cols-2 gap-4 px-8 pt-6 pb-8 mb-4"
 					action="https://submit-form.com/CKkOsyrAP"
 				>
 					<input type="hidden" name="_redirect" value="{currentLocation}?form=tal" />
@@ -196,7 +203,7 @@
 							/>
 						</div>
 					{/each}
-					<div class="col-span-1 md:col-span-2 flex justify-center">
+					<div class="col-span-1 custom:col-span-2 flex justify-center">
 						<button class="elegant-submit-button" type="submit">Skicka</button>
 					</div>
 				</form>
@@ -210,7 +217,7 @@
 		</section>
 
 		<h1 id="osa" class="text-6xl text-center font-bold la-luxes-script mb-8">OSA</h1>
-		<section class="mb-32 space-y-4 shadow-xl p-12 bg-white">
+		<section class="mb-32 space-y-4 shadow-xl p-8 custom:p-12 bg-white">
 			<p>
 				OSA i formuläret nedan senast den 1/7. Om du har frågor hör gärna av dig till Amanda på
 				<a href="tel:073-8482244">073-8482244</a>
@@ -240,13 +247,15 @@
 
 			{#if numberOfOSA > 0}
 				<form
-					class="mt-8 bg-stone-50 grid grid-cols-1 md:grid-cols-2 gap-4 px-8 pt-6 pb-8 mb-4"
+					class="mt-8 bg-stone-50 grid grid-cols-1 custom:grid-cols-2 gap-4 px-8 pt-6 pb-8 mb-4"
 					action="https://submit-form.com/ziknqZsej"
 				>
 					<input type="hidden" name="_redirect" value="{currentLocation}?form=osa" />
 					<input type="hidden" name="_append" value="false" />
 					{#each Array(numberOfOSA) as _, number}
-						<p class="text-center col-span-1 md:col-span-2 text-gray-700">Person {number + 1}</p>
+						<p class="text-center col-span-1 custom:col-span-2 text-gray-700">
+							Person {number + 1}
+						</p>
 						<input type="hidden" name="osa" value="person-{number + 1}" />
 						{#each osaForm as { name, label, type, required }}
 							<div class="mb-4 flex flex-col justify-between">
@@ -263,7 +272,7 @@
 							</div>
 						{/each}
 					{/each}
-					<div class="col-span-1 md:col-span-2 flex justify-center">
+					<div class="col-span-1 custom:col-span-2 flex justify-center">
 						<button class="elegant-submit-button" type="submit">Skicka</button>
 					</div>
 				</form>

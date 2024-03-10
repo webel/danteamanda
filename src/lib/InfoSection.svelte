@@ -13,7 +13,7 @@
 		<img src={imgSrc} alt="Vigsel" class="w-full shadow-xl lg:h-[430px] lg:w-auto" />
 		<Map {place} />
 	</div>
-	<div class="shadow-xl p-12 bg-white">
+	<div class="shadow-xl p-8 custom:p-12 bg-white">
 		<slot />
 	</div>
 </section>

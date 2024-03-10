@@ -18,6 +18,10 @@
     text-decoration: none;
   }
 
+  a.active {
+    @apply font-bold;
+  }
+
   .baskerville-regular {
     font-family: 'Libre Baskerville', serif;
     font-weight: 400;

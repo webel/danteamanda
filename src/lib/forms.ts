@@ -74,5 +74,11 @@ export const osaForm = [
     label: 'E-post',
     type: 'email',
     required: true
+  },
+  {
+    name: 'message',
+    label: 'Meddelande',
+    type: 'textarea',
+    required: false
   }
 ];

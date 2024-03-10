@@ -51,7 +51,7 @@
 		</Countdown>
 	</section>
 	<section class="mt-32 max-w-[920px] m-auto">
-		<InfoSection place="Västbyn 22, Robertsfors, Sweden" imgSrc="vigsel.png">
+		<InfoSection place="Västbyn 22, Robertsfors, Sweden" imgSrc="par.jpeg">
 			<h2 class="text-5xl la-luxes-script mb-8">15.00 - Vigsel i Västbyn</h2>
 			<p>
 				Klockan tre börjar vår vigsel hemma på gården i Västbyn. Du hittar smidigast dit genom att
@@ -74,11 +74,11 @@
 			name="Middag och Fest"
 			id="fest"
 		>
-			<h2 class="text-5xl la-luxes-script mb-8">ca 17.00 - Middag och Fest i Folkets Hus</h2>
+			<h2 class="text-5xl la-luxes-script mb-8">Middag och Fest i Folkets Hus</h2>
 			<p>
-				Runt 17 planeras bröllopsparet anlända till "Folkan". Väl där är det middag med påföljande
-				fest. Från Västbyn till Folkets Hus är det ungefär 2,5 kilometer. Ta gärna följe med någon
-				som hittar i trakten, annars hittar man rätt med adressen nedan.
+				Efter vigseln blir det att ta sig till "Folkan". Väl där är det middag med påföljande fest.
+				Från Västbyn till Folkets Hus är det ungefär 2,5 kilometer. Ta gärna följe med någon som
+				hittar i trakten, annars hittar man rätt med adressen nedan.
 			</p>
 			<p class="mt-4">
 				Det är alltid utför och medvind till Folkan så en medhavd cykel är kanske ett trevligt
@@ -218,8 +218,9 @@
 
 		<h1 id="osa" class="text-6xl text-center font-bold la-luxes-script mb-8">OSA</h1>
 		<section class="mb-32 space-y-4 shadow-xl p-8 custom:p-12 bg-white">
+			<p>OSA i formuläret nedan senast den 1/7. Har du specialkost? Meddela det här.</p>
 			<p>
-				OSA i formuläret nedan senast den 31/4. Om du har frågor hör gärna av dig till Amanda på
+				Om du har frågor hör gärna av dig till Amanda på
 				<a href="tel:073-8482244">073-8482244</a>
 				eller <a href="mailto:amanda_fremling@yahoo.se">amanda_fremling@yahoo.se</a>
 				.

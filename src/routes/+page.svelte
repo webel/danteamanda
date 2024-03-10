@@ -219,7 +219,7 @@
 		<h1 id="osa" class="text-6xl text-center font-bold la-luxes-script mb-8">OSA</h1>
 		<section class="mb-32 space-y-4 shadow-xl p-8 custom:p-12 bg-white">
 			<p>
-				OSA i formuläret nedan senast den 1/7. Om du har frågor hör gärna av dig till Amanda på
+				OSA i formuläret nedan senast den 31/4. Om du har frågor hör gärna av dig till Amanda på
 				<a href="tel:073-8482244">073-8482244</a>
 				eller <a href="mailto:amanda_fremling@yahoo.se">amanda_fremling@yahoo.se</a>
 				.

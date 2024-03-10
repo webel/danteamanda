@@ -178,7 +178,7 @@
 				</p>
 				<p>
 					<b>Daniel Dahlgren</b><br />
-					070-206 33 26 <br /> anne.dragsbaek21@live.dk
+					070-206 33 26 <br />
 				</p>
 			</div>
 

@@ -154,7 +154,7 @@
 
 			<Card
 				title="Barn"
-				content="Era barn är naturligtvis välkomna på vigseln och under middagen, efter 20:00 har vi planerat att dansgolvet öppnas och då tänker vi att det är dags för barnen att avlägsna sig. Spädbarn är självklart välkomna under hela firandet."
+				content="Era barn är naturligtvis välkomna på vigseln och under middagen, efter 22:00 har vi planerat att dansgolvet öppnas och då tänker vi att det är dags för barnen att avlägsna sig. Spädbarn är självklart välkomna under hela firandet."
 				imgSrc="barn.jpg"
 				alt="Children at an event"
 				id="barn"
@@ -185,7 +185,7 @@
 				</p>
 				<p>
 					<b>Daniel Dahlgren</b><br />
-					070-206 33 26 <br />
+					070-206 33 26 <br /> daniel.dahlgrenlindstrom@gmail.com
 				</p>
 			</div>
 
